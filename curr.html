@@ -11,8 +11,6 @@
     <span class="" style="display: block;">Рублейт = 10₽</span>
     <span class="" style="display: block;">Рубль = 1₽</span>
     <script>
-    const big_ans = document.getElementById('lagre')
-    const output = document.querySelector('.output')
     const output2 = document.querySelector('.output2')
     const output3 = document.querySelector('.output3')
     let time
@@ -24,8 +22,8 @@
         let ple2=(tl[3]/2.4)+(tl[4]/144)+(tl[5]/8640)
         let plet=ple1+ple2
         let dulon=plet/(2.7182818284590452353602874713527+3)
-        output2.innerHTML='Плет = '+plet+'₽'
-        output3.innerHTML='Дулон = '+dulon+'₽'
+        output2.innerHTML='Плет = '+(Math.floor(plet*1000)/1000)+'₽'
+        output3.innerHTML='Дулон = '+(Math.floor(dulon*1000)/1000)+'₽'
     }
     setInterval(tick, 10)
     </script>
