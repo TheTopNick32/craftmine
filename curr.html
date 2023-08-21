@@ -17,7 +17,6 @@
     const output3 = document.querySelector('.output3')
     let time
     function tick() {
-        big_ans.innerHTML = Math.floor((10**((big2.value*Math.log10(big1.value))%1))*10000000000)/10000000000 + '•10<sup>' + Math.floor(big2.value*Math.log10(big1.value)) + '</sup>'
         time = new Date();
         let tl=[time.getUTCFullYear(),time.getUTCMonth()+1,time.getUTCDate(),time.getUTCHours(),time.getUTCMinutes(),time.getUTCSeconds()+(time.getUTCMilliseconds()/1000)]
         let z=(((tl[2]/30)*1000)+(tl[0]/10))/(3.1415926535897932384626433832795*3)
