@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валюты</title>
+</head>
+<body>
+    <span class="output2" style="display: block;"></span>
+    <span class="output3" style="display: block;"></span>
+    <span class="" style="display: block;">Рублейт = 10₽</span>
+    <span class="" style="display: block;">Рубль = 1₽</span>
+    <script>
+    const big_ans = document.getElementById('lagre')
+    const output = document.querySelector('.output')
+    const output2 = document.querySelector('.output2')
+    const output3 = document.querySelector('.output3')
+    let time
+    function tick() {
+        big_ans.innerHTML = Math.floor((10**((big2.value*Math.log10(big1.value))%1))*10000000000)/10000000000 + '•10<sup>' + Math.floor(big2.value*Math.log10(big1.value)) + '</sup>'
+        time = new Date();
+        let tl=[time.getUTCFullYear(),time.getUTCMonth()+1,time.getUTCDate(),time.getUTCHours(),time.getUTCMinutes(),time.getUTCSeconds()+(time.getUTCMilliseconds()/1000)]
+        let z=(((tl[2]/30)*1000)+(tl[0]/10))/(3.1415926535897932384626433832795*3)
+        let ple1=1000+Math.floor(z)-tl[1]
+        let ple2=(tl[3]/2.4)+(tl[4]/144)+(tl[5]/8640)
+        let plet=ple1+ple2
+        let dulon=plet/(2.7182818284590452353602874713527+3)
+        output2.innerHTML='Плет = '+plet+'₽'
+        output3.innerHTML='Дулон = '+dulon+'₽'
+    }
+    setInterval(tick, 10)
+    </script>
+</body>
+</html>
